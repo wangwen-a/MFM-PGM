@@ -1,0 +1,5 @@
+Raw source MD5: 8910b951ea992b8e31aaee4ff96825a4
+Selection: TOT if present; otherwise the sole season row. No G-weighted averaging.
+Exclude players with a missing/nonfinite retained metric. No imputation or minutes filter.
+Remove WS and BPM from model. Type-7 quintiles; tied values remain together.
+Empirical data cutpoints are NOT the latent thresholds used by the MFM model.

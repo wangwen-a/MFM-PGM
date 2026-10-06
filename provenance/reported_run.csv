@@ -1,0 +1,10 @@
+"item","value"
+"N",537
+"p",18
+"iterations",20000
+"burnin",4000
+"retained_draws",16000
+"initial_K",6
+"Dahl_K",4
+"Dahl_iteration",12476
+"recorded_sampling_seconds",196439.62

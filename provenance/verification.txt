@@ -1,0 +1,22 @@
+Package verification, 2026-10-06
+
+PASS: model.R, model.cpp and preprocess.R are byte-identical to both the original
+NBA_MFM_18vars_5levels.zip and the code beside the archived NBA results.
+PASS: preprocessing reproduces the 537 x 18 ordinal input and player ordering.
+PASS: original chain 01's 8000-iteration labels are an identical prefix of the
+20000-iteration checkpoint; the archived initial states also match.
+PASS: the original summariser applied to all 16000 retained draws reproduces
+every field of the previously audited posterior_summary.rds exactly.
+PASS: compact posterior_draws.rds contains every partition and retained graph
+needed by the original summariser; it is not a continuation checkpoint.
+PASS: in a 30-observation, 3-variable, 204-iteration numerical test, the new
+checkpoint wrapper and the unchanged direct sampler produce identical labels,
+graphs, states and RNG state. Timing fields are excluded from this comparison.
+PASS: stopping and resuming at iteration 202 or the burn-in boundary (200) in
+that small test reproduces the uninterrupted result exactly.
+PASS: NBA initialization alone reproduced the archived initial labels and full
+initial state (numeric tolerance 1e-12) in the local validation environment.
+
+Validation used R 4.5.3, separate from the archived sampling environment.
+No new formal NBA MCMC experiment was launched. These implementation and output
+checks are not proofs of posterior convergence or cross-platform bitwise identity.
